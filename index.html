@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather here and now</title>
+    <title>list-style-type</title> 
+    <style>
+        ul {
+         list-style-type: none; 
+        }
+       </style> 
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="loading-mask"></div>
+    <div id="body">
+        <div  id="city-name">
+            <form id="weather-form">
+                <input type="text" id="city" name="city" required>
+                <button id="city-name__btn">
+                    <svg class="location-form_icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21.0004 21L16.6504 16.65" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+              </form>
+        </div>
+    
+        <div  id="weather-image">
+            <img id="weather-icon" src="" alt="Weather">
+            
+        </div>
+        <div id="temp-descript">
+            <span id="temperature"></span><br>
+            <span id="description"></span>
+        </div>
+        
+        <div class="hourly-forecast">
+            <div class="forecast-scroll">
+                <div class="forecast-inner" id="hourly-forecast"></div>
+            </div>
+        </div>
+        <div  id="wind">
+            <span id="wind-direction"></span><br>
+            <span id="wind-speed"></span>         
+            <img id="wind-icon" class="wind-icon" src="" alt="Wind Icon">
+        </div>
+
+        <div  id="day">
+            <span id="sunrise"></span>
+            <span id="sunset"></span>
+            <span id="daylight"></span>
+        </div>
+        <div  id="data">
+            <span id="humidity"></span>
+            <span id="feels-like"></span>
+            <span id="uv-index"></span>
+            <span id="pressure"></span>
+            <span id="rain-probability"></span>
+            <div class="line" id="line1"></div>
+            <div class="line" id="line2"></div>
+            <div class="line" id="line3"></div>
+            <div class="line" id="line4"></div>
+            <ul>
+                <li id="moisture">Humidity</li>        
+                <li id="feels">Feels</li>
+                <li id="UV">UV</li>
+                <li id="pressure-text">Pressure</li>
+                <li id="probability">Chance of rain</li>
+            </ul>   
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>

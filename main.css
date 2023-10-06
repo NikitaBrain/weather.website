@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #67a4d3;
+}
+
+#body {
+    width: 1200px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+
+
+#loading-mask {
+    background-color: #67a4d3;
+    width: 1200px;
+    height: 535px;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    z-index: 1; 
+}
+
+#loading-mask.hidden {
+    opacity: 0; /* Устанавливаем начальное значение прозрачности */
+     transition: opacity 0.2s ease-in-out; /*Добавляем анимацию плавного изменения opacity */
+     pointer-events: none; /*После исчезновения делаем элемент невидимым для событий  */
+  } 
+
+#weather-form {
+    position: absolute;
+    top: 40px;
+    left: 540px;
+}
+
+#city {
+    display: block;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    width: 550px;
+    height: 50px;
+    padding: 12px 20px;
+    padding-right: 85px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    font-size: 24px;
+}
+
+#city-name__btn {
+    position: absolute;
+    right: 30px;
+    top: 13px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+} 
+
+#weather-image {
+    /* background-color: lightblue;  */
+    width: 220px;
+    height: 180px; 
+    position: absolute;
+    top: 89px;
+    left: 145px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #weather-icon {
+        width: 220px;
+        height: 180px; 
+    }
+    
+ 
+}
+#temp-descript {
+    background:rgba(255, 255, 255, 0);
+    width: 220px;
+    height: 75px;
+    position: absolute;
+    left: 145px;
+    top: 280px;
+    text-align: center;
+
+#temperature {
+    font-size: 40px;
+    font-style: bold;
+    }
+#description {
+    font-size: 24px;
+    font-weight: 500;
+    white-space: nowrap;
+    }
+}
+
+
+  .forecast-scroll {
+    position: absolute;
+      top: 380px;
+      left: 65px;
+    width: 400px;
+    height: 100px;
+    overflow-x: scroll;
+    white-space: nowrap;
+    margin: 0 auto;
+  }
+  
+  .forecast-inner {
+    display: flex;
+  }
+  
+  .forecast-item {
+    text-align: center; /* Выравнивание текста в центре */
+    margin: 10px; /* Отступы между прогнозами */
+}
+  
+  .forecast-hour {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .weather-icon {
+    max-width: 50px; /* Максимальная ширина иконки */
+    height: auto; /* Автоматическая высота, чтобы сохранить пропорции */
+    display: block; /* Отображать как блочный элемент */
+    margin: 0 auto; /* Выравнивание по центру */
+    margin-top: 5px; /* Отступ сверху для времени и температуры */
+}
+  .forecast-temperature {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+#wind {
+    background-color: white;
+    background: rgba(255, 255, 255, 0.1);
+    width: 285px;
+    height: 130px;
+    position: absolute;
+    top: 185px;
+    left: 530px;
+    border-radius: 12px;
+
+    font-size: 24px;
+
+#wind-direction {
+    position: absolute;
+    top: 32px;
+    left: 15px;
+}
+#wind-speed {
+    position: absolute;
+    top: 71px;
+    left: 15px;
+}
+   
+}
+ .wind-icon {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+#day {
+    background-color: white;
+    background: rgba(255, 255, 255, 0.1);
+    width: 285px;
+    height: 130px;
+    position: absolute;
+    top: 335px;
+    left: 530px;
+    border-radius: 12px;
+
+    font-size: 20px;
+
+    #sunrise {
+        position: absolute;
+        top: 33px;
+        left: 10px;
+
+    }
+    #sunset {
+        position: absolute;
+        top: 75px;
+        left: 10px; 
+
+
+    }
+    
+    #daylight {
+        text-align: center;
+        position: absolute;
+        top: 45px;
+        left: 150px; 
+    }
+} 
+
+#data {
+    background-color: white;
+    background: rgba(255, 255, 255, 0.1);
+    width: 245px;
+    height: 280px;
+    position: absolute;
+    top: 185px;
+    left: 835px;
+    border-radius: 12px;
+
+    font-size: 20px;
+}
+
+#humidity {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            font-weight: 500;
+        }
+#feels-like {
+    position: absolute;
+    top: 65px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: 500;
+}
+#uv-index {
+    position: absolute;
+    top: 125px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: 500; 
+}   
+#pressure {
+    position: absolute;
+    top: 185px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: 500; 
+}
+#rain-probability {
+    position: absolute;
+    top: 241px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: 500; 
+}
+#moisture {
+        margin-left: 10px;
+        margin-top: 14px;
+        color: rgba(255, 255, 255, 0.5);
+
+        
+    }
+    #feels {
+        margin-left: 10px;
+        margin-top: 33px;
+        color: rgba(255, 255, 255, 0.5);    
+    }
+    #UV {
+        margin-left: 10px;
+        margin-top: 33px;
+        color: rgba(255, 255, 255, 0.5);  
+
+        
+    }
+    #pressure-text {
+        margin-left: 10px;
+        margin-top: 38px;
+        color: rgba(255, 255, 255, 0.5); 
+    }
+    #probability {
+        margin-left: 10px;
+        margin-top: 33px;
+        color: rgba(255, 255, 255, 0.5);   
+    }
+    .line {
+        background-color: grey;
+        opacity: 0.5;
+        width: 245px;
+        height: 1px;
+    }
+    #line1 {
+        position: absolute;
+        top: 50px;
+    }
+    #line2 {
+        position: absolute;
+        top: 110px;
+    }
+    #line3 {
+        position: absolute;
+        top: 170px;
+    }
+    #line4 {
+        position: absolute;
+        top: 230px;
+    }
+    
